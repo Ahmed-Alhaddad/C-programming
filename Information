@@ -1,0 +1,26 @@
+Prime Number
+
+
+-----------------------------------------------------------------------
+Armstrong             or		         NOT
+
+1634						123		
+1^4 + 6^4 + 3^4 + 4^4 = 1634			1^3 + 2^3 + 3^3 = 36
+-----------------------------------------------------------------------
+Strong Number		or			NOT
+145						123
+1! + 4! + 5! = 145				1! + 2! + 3! = 9 		
+Example\ 5! -> (5 * 4 * 3 * 2 * 1)
+-----------------------------------------------------------------------
+Perfect Number
+
+6 = 1 + 2 + 3
+28 = 1 + 2 + 4 + 7 + 14
+
+-----------------------------------------------------------------------
+Modulus Operator
+ rem = a % b  
+ 	   8 % 5 = 3
+
+When we perform the modulus operator between 8 and 5, means 8 % 5, it returns the remainder 3 because when 8 is divided by 5, it returns 1 as the quotient and 3 as the remainder.
+

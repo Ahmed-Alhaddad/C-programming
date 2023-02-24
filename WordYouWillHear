@@ -1,0 +1,9 @@
+Repository -> Repo
+Branch 
+local Repo
+Remote Repo
+Commit (Snapshot or Checkpoint in Your Local Repo)
+Clone [From Local Or Remote]
+Push [upload local Changes to Remote]
+Pull [You Pull changes From Remote Repo to Your Local]
+Pull Request [Tell Other About Your Changes To Pull it From Local To Remote]

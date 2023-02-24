@@ -1,0 +1,24 @@
+What is the modulus operator in C and C++?
+
+The modulus operator is a symbol used in various programming languages. It is denoted by the percentage symbol (%). It is a modulus operator that is used in the arithmetic operator. It determines the remainder. In some cases, the remainder may be 0, it means the number is completely divisible by the divisor.
+
+Syntax:
+
+    rem = a % b  
+
+In the above Syntax, a and b are two integers, and the % (Percent) symbol is a modulus operator that divides a by b and returns the remainder.
+Return Possibilities of the Modulus Operator
+
+Following are the possibilities when the first number is divided by the second number to return only a remainder value.
+
+    If the variable a is completely divisible by the second number (b), it returns zero (0), or the remainder becomes 0.
+    If the variable a is not completely divisible by the second number (b), it returns a numeric value in the range [1, a - 1]. Or we can say it returns the remainder to a non-zero integer value.
+    If the first number (a) is non-zero and the second number is 0, it gives an error at compile time.
+
+How does Modulus Operator work in C/C++?
+
+The modulus operator works with two operands received by the end-user. After that, it divides the first number by the second number and determines the remainder. Let's understand the following example that illustrates the functionality of the modulus operator.
+
+Example: When we perform the modulus operator between 8 and 5, means 8 % 5, it returns the remainder 3 because when 8 is divided by 5, it returns 1 as the quotient and 3 as the remainder.
+
+Similarly, 7 % 2 returns 1 as a remainder because when 7 is divided by 2, it returns 3 as quotient and 1 as remainder.
