@@ -1,7 +1,7 @@
 /*****************************************
  *
  *@file   :  
- *@Brief  :   
+ *@Brief  :   Write a C program to find sum of all natural numbers between 1 to n using recursion.
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -16,19 +16,32 @@
 /*************** Globel Variable section end *********************/
 
 /*************** Decleration section start *********************/
-
+int Sum(int Number);
 /*************** Decleration section end *********************/
 
 int main()
 {
-
+	int Number = 0;
+	printf("Please enter the Number : ");
+	scanf("%d", &Number);
+	printf("Sum of all natural numbers between 1 to %d = %d\n", Number, Sum(Number)); 
 
 
 	return 0;
 }
 
 /*************** Defenation Variable section start *********************/
-
+int Sum(int Number)
+{
+	if(1 == Number)
+	{
+		return 1;
+	}
+	else
+	{
+		return Number + Sum(Number - 1);
+	}
+}
 
 
 
@@ -37,6 +50,6 @@ int main()
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed            
+ *Ahmed Waheed            				Write a C program to find sum of all natural numbers between 1 to n using recursion.
  *****************************************************/
 

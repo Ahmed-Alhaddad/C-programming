@@ -16,7 +16,7 @@
 /*************** Globel Variable section end *********************/
 
 /*************** Decleration section start *********************/
-int Print(int Number);
+void Print(int Number);
 /*************** Decleration section end *********************/
 
 int main()
@@ -25,20 +25,22 @@ int main()
 	printf("Please Enter the Number : ");
 	scanf("%d", &Number);
 	Print(Number);
-	
+	printf("\n");
 
 	return 0;
 }
 
 /*************** Defenation Variable section start *********************/
-int Print(int Number)
+void Print(int Number)
 {
-	if(Number >= 1)
+	if(Number == 0)
 	{
-		printf("%d \n",Number);
-	
-		Print(++Number);
+		return ;
 	}
+	Number--;
+	
+	printf("%d  ", Number + 1);
+	Print(Number);
 }
 
 
