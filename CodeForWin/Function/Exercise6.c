@@ -1,7 +1,7 @@
 /*****************************************
  *
  *@file   :  
- *@Brief  :   C program to find prime numbers in given range using functions
+ *@Brief  :   Write a C program to find all prime numbers between given interval using functions.
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -77,6 +77,6 @@ int Prime(int Number)
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed            			C program to find prime numbers in given range using functions
+ *Ahmed Waheed            			Write a C program to find all prime numbers between given interval using functions.
  *****************************************************/
 

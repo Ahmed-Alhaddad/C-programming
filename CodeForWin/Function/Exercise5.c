@@ -80,42 +80,48 @@ int Prime(int Number)
 
 int Armstrong(int Number)
 {
-	int Power = 0;
-	int flag = 0;
-	int counter = 0;
-	int Test = Number;
-	int check = 0;
-	int check1 = 1;
-	int sum = 0;
-	while(Test)
-	{
-		Test = Test / 10;
-		Power++;
-	}
-	Test = Number;
-	while(Test)
-	{
-		check = Test;
-		check %= 10;
-		for(counter = 0; counter < Power; counter++)
-		{
-			check1 *= check;
-			
-		}
-		
-		sum += check1;
-		Test = Test / 10;
-		check1=1;
-	}
-	if(sum == Number)
+	if(Number > 1 && Number < 10)
 	{
 		return 1;
 	}
 	else
 	{
-		return 0;	
-	}		
-	
+		int Power = 0;
+		int flag = 0;
+		int counter = 0;
+		int Test = Number;
+		int check = 0;
+		int check1 = 1;
+		int sum = 0;
+		while(Test)
+		{
+			Test = Test / 10;
+			Power++;
+		}
+		Test = Number;
+		while(Test)
+		{
+			check = Test;
+			check %= 10;
+			for(counter = 0; counter < Power; counter++)
+			{
+				check1 *= check;
+				
+			}
+			
+			sum += check1;
+			Test = Test / 10;
+			check1=1;
+		}
+		if(sum == Number)
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;	
+		}		
+	}
 }
 
 int Perfect(int Number)
