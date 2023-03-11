@@ -1,8 +1,7 @@
-
 /*****************************************
  *
  *@file   :  
- *@Brief  :    Write a program in C to find the maximum number between two numbers using a pointer.
+ *@Brief  :   Write a program in C to print all the alphabets using a pointer.
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -12,10 +11,6 @@
 /*************** Include section end *****************************/
 
 /*************** Globel Variable section start *******************/
-int num1;
-int num2;
-int *Pnum1 = &num1;
-int *Pnum2 = &num2;
 
 
 /*************** Globel Variable section end *********************/
@@ -26,22 +21,22 @@ int *Pnum2 = &num2;
 
 int main()
 {
-	
-	printf("Input the first number : ");
-	scanf("%d", Pnum1);
-	printf("Input the second number : ");
-	scanf("%d", Pnum2);
-
-	if(*Pnum1 > *Pnum2)
+	char Alphabets[26];
+	char *PtrAlphabets = Alphabets;
+	int Count = 0;
+	for(Count = 0; Count < 26; Count++)
 	{
-		printf("%d is the macximum number.", *Pnum1);
+		*PtrAlphabets = 'A' + Count;
+		PtrAlphabets++;
 	}
-	else
+	PtrAlphabets = (PtrAlphabets - 26);
+	for(Count = 0; Count < 26; Count++)
 	{
-		printf("%d is the macximum number.", *Pnum2);
-	}	
-		
-
+		printf(" %c ", *PtrAlphabets);
+		PtrAlphabets++;
+	}
+	
+	
 
 	return 0;
 }
@@ -56,6 +51,6 @@ int main()
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed             Write a program in C to find the maximum number between two numbers using a pointer.
+ *Ahmed Waheed            Write a program in C to print all the alphabets using a pointer.
  *****************************************************/
 

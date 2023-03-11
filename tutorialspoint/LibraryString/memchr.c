@@ -1,53 +1,86 @@
-
 /*****************************************
  *
  *@file   :  
- *@Brief  :    Write a program in C to find the maximum number between two numbers using a pointer.
+ *@Brief  :   C library function - memchr()
  *@Auther :  Ahmed Waheed
  *****************************************
  */
 
 /*************** Include section strat ***************************/
 #include <stdio.h>
+#include <string.h>
 /*************** Include section end *****************************/
 
 /*************** Globel Variable section start *******************/
-int num1;
-int num2;
-int *Pnum1 = &num1;
-int *Pnum2 = &num2;
-
+unsigned char Data[100];
+unsigned int Length = 0;
+char point = 0;
 
 /*************** Globel Variable section end *********************/
 
 /*************** Decleration section start *********************/
-
+void *My_memchr(const void *str, unsigned char c, unsigned int n);
 /*************** Decleration section end *********************/
 
 int main()
 {
+	unsigned char *check = NULL;
+	printf("\nPlease Enter the point to begin with : ");
+	scanf("%c", &point);
 	
-	printf("Input the first number : ");
-	scanf("%d", Pnum1);
-	printf("Input the second number : ");
-	scanf("%d", Pnum2);
-
-	if(*Pnum1 > *Pnum2)
+	printf("Please Enter the Data : ");
+	scanf("%s",Data);
+	
+	
+	
+	check = My_memchr(&Data, point, strlen(Data));
+	if(NULL == &check)
 	{
-		printf("%d is the macximum number.", *Pnum1);
+		printf("WOW Error \n");
 	}
 	else
 	{
-		printf("%d is the macximum number.", *Pnum2);
-	}	
 		
-
+		
+			printf("%s\n", check);
+			
+		
+		
+	}
 
 	return 0;
 }
 
 /*************** Defenation Variable section start *********************/
-
+void *My_memchr(const void *str, unsigned char c, unsigned int n)
+{
+	unsigned char *Temp = (unsigned char *)str;
+	unsigned char *TempR =NULL;
+	
+	if(NULL == Temp)
+	{
+		printf("There is NULL");
+	}
+	else
+	{
+		while(n)
+		{
+			if(*Temp == c)
+			{
+				return Temp;
+				break;
+			}	
+			else
+			{
+				Temp++;
+				n--;
+			}
+		}
+	}
+			
+			
+	
+}
 
 
 
@@ -56,6 +89,6 @@ int main()
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed             Write a program in C to find the maximum number between two numbers using a pointer.
+ *Ahmed Waheed            				C library function - memchr()
  *****************************************************/
 

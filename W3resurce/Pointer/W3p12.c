@@ -1,8 +1,7 @@
-
 /*****************************************
  *
  *@file   :  
- *@Brief  :    Write a program in C to find the maximum number between two numbers using a pointer.
+ *@Brief  :    Write a program in C to find the factorial of a given number using pointers. 
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -12,10 +11,7 @@
 /*************** Include section end *****************************/
 
 /*************** Globel Variable section start *******************/
-int num1;
-int num2;
-int *Pnum1 = &num1;
-int *Pnum2 = &num2;
+int *Fact = NULL;
 
 
 /*************** Globel Variable section end *********************/
@@ -26,22 +22,18 @@ int *Pnum2 = &num2;
 
 int main()
 {
+	int Number = 0;
+	int Count = 0;
+	int FNum = 1;
+	printf("Input a number : ");
+	scanf("%d", &Number);
+	Fact = &FNum;
 	
-	printf("Input the first number : ");
-	scanf("%d", Pnum1);
-	printf("Input the second number : ");
-	scanf("%d", Pnum2);
-
-	if(*Pnum1 > *Pnum2)
-	{
-		printf("%d is the macximum number.", *Pnum1);
-	}
-	else
-	{
-		printf("%d is the macximum number.", *Pnum2);
+	for(Count = 1; Count <= Number; Count++)
+	{	
+		*Fact = *Fact * Count;
 	}	
-		
-
+	printf("Total : %d\n", *Fact);
 
 	return 0;
 }
@@ -56,6 +48,6 @@ int main()
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed             Write a program in C to find the maximum number between two numbers using a pointer.
+ *Ahmed Waheed             Write a program in C to find the factorial of a given number using pointers. 
  *****************************************************/
 

@@ -1,8 +1,7 @@
-
 /*****************************************
  *
  *@file   :  
- *@Brief  :    Write a program in C to find the maximum number between two numbers using a pointer.
+ *@Brief  :   Write a program in C to compute the sum of all elements in an array using pointers
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -12,10 +11,6 @@
 /*************** Include section end *****************************/
 
 /*************** Globel Variable section start *******************/
-int num1;
-int num2;
-int *Pnum1 = &num1;
-int *Pnum2 = &num2;
 
 
 /*************** Globel Variable section end *********************/
@@ -26,23 +21,26 @@ int *Pnum2 = &num2;
 
 int main()
 {
-	
-	printf("Input the first number : ");
-	scanf("%d", Pnum1);
-	printf("Input the second number : ");
-	scanf("%d", Pnum2);
-
-	if(*Pnum1 > *Pnum2)
+	int Elements[10];
+	int *PtrElements = Elements;
+	int NumOfElements = 0;
+	int Count = 0;
+	int Sum = 0;
+	printf("Input the number of elements to store in the array (max 10) : ");
+	scanf("%d", &NumOfElements);
+	printf("Input %d number of elements in the array :\n", NumOfElements);
+	for(Count = 0; Count < NumOfElements; Count++)
 	{
-		printf("%d is the macximum number.", *Pnum1);
-	}
-	else
-	{
-		printf("%d is the macximum number.", *Pnum2);
-	}	
+		printf("element - %d : ", (Count + 1)); 
+		scanf("%d", &Elements[Count]);
 		
-
-
+	}
+	for(Count = 0; Count < NumOfElements; Count++)
+	{
+		Sum += *PtrElements;
+		PtrElements++;
+	}
+	printf("The sum of array is : %d\n", Sum);
 	return 0;
 }
 
@@ -56,6 +54,6 @@ int main()
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed             Write a program in C to find the maximum number between two numbers using a pointer.
+ *Ahmed Waheed            Write a program in C to compute the sum of all elements in an array using pointers
  *****************************************************/
 

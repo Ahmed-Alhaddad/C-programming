@@ -1,8 +1,7 @@
-
 /*****************************************
  *
  *@file   :  
- *@Brief  :    Write a program in C to find the maximum number between two numbers using a pointer.
+ *@Brief  :   Write a program in C to print all permutations of a given string using pointers
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -12,10 +11,8 @@
 /*************** Include section end *****************************/
 
 /*************** Globel Variable section start *******************/
-int num1;
-int num2;
-int *Pnum1 = &num1;
-int *Pnum2 = &num2;
+char GivenString[10];
+char *PtrString = NULL;
 
 
 /*************** Globel Variable section end *********************/
@@ -26,22 +23,20 @@ int *Pnum2 = &num2;
 
 int main()
 {
-	
-	printf("Input the first number : ");
-	scanf("%d", Pnum1);
-	printf("Input the second number : ");
-	scanf("%d", Pnum2);
-
-	if(*Pnum1 > *Pnum2)
+	int FCount = 0;
+	int SCount = 0;
+	printf("Please Enter your Data : ");
+	scanf("%[^\n]", GivenString);
+	PtrString = &GivenString[0];
+	for(FCount = 0; FCount < 16; FCount++)
 	{
-		printf("%d is the macximum number.", *Pnum1);
-	}
-	else
-	{
-		printf("%d is the macximum number.", *Pnum2);
-	}	
+		for(SCount = 0; SCount < 4; SCount++)
+		{
+			printf("%c", *PtrString);
+			PtrString++;
+		}
 		
-
+	}
 
 	return 0;
 }
@@ -56,6 +51,6 @@ int main()
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed             Write a program in C to find the maximum number between two numbers using a pointer.
+ *Ahmed Waheed            Write a program in C to print all permutations of a given string using pointers
  *****************************************************/
 

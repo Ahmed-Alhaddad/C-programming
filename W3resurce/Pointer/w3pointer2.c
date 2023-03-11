@@ -1,9 +1,29 @@
+
+/*****************************************
+ *
+ *@file   :  
+ *@Brief  :    Write a program in C to demonstrate how to handle pointers in a program
+ *@Auther :  Ahmed Waheed
+ *****************************************
+ */
+
+/*************** Include section strat ***************************/
 #include <stdio.h>
+/*************** Include section end *****************************/
+
+/*************** Globel Variable section start *******************/
+
 unsigned int m = 29;
 unsigned int *ab = &m; 
+/*************** Globel Variable section end *********************/
+
+/*************** Decleration section start *********************/
+
+/*************** Decleration section end *********************/
+
 int main()
 {
-	
+
 	printf("Address of m : %p \n", &m);
 	printf("Value of m : %i \n", m);
 	
@@ -21,6 +41,20 @@ int main()
 	printf("The pointer variable ab is assinged with the value 7");
 	printf("Address of m : %p \n", &m);
 	printf("Value of m : %i \n", m);
-	
+
 	return 0;
 }
+
+/*************** Defenation Variable section start *********************/
+
+
+
+
+/***************Defination Variable section end *********************/
+
+/**************************************************
+ *User                    Date                Brief
+ **************************************************
+ *Ahmed Waheed             Write a program in C to demonstrate how to handle pointers in a program
+ *****************************************************/
+

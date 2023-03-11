@@ -1,8 +1,7 @@
-
 /*****************************************
  *
  *@file   :  
- *@Brief  :    Write a program in C to find the maximum number between two numbers using a pointer.
+ *@Brief  :   
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -12,10 +11,6 @@
 /*************** Include section end *****************************/
 
 /*************** Globel Variable section start *******************/
-int num1;
-int num2;
-int *Pnum1 = &num1;
-int *Pnum2 = &num2;
 
 
 /*************** Globel Variable section end *********************/
@@ -26,23 +21,32 @@ int *Pnum2 = &num2;
 
 int main()
 {
-	
-	printf("Input the first number : ");
-	scanf("%d", Pnum1);
-	printf("Input the second number : ");
-	scanf("%d", Pnum2);
-
-	if(*Pnum1 > *Pnum2)
+	int Numbers[50] ;
+	int *PtrNumbers = Numbers;
+	int Elements = 0;
+	printf("Please Enter the Number of Elements : ");
+	scanf("%d", &Elements);
+	int Count = 0;
+	int Temp = 0;
+	for(Count = 0; Count < Elements; Count++)
 	{
-		printf("%d is the macximum number.", *Pnum1);
+		printf("element - %d : ", (Count + 1));
+		scanf("%d", &Numbers[Count]);
 	}
-	else
+	Temp = Numbers[0];
+	printf("\n");
+	for(Count = 1; Count < Elements; Count++)
 	{
-		printf("%d is the macximum number.", *Pnum2);
-	}	
-		
-
-
+		if(Temp > Numbers[Count])
+		{
+			Numbers[Count - 1] = Temp;
+			Temp = Numbers[Count];
+		}
+	}
+	for(Count = 0; Count < Elements; Count++)
+	{
+		printf("element - %d : %d \n", (Count + 1), *(PtrNumbers + Count));
+	}
 	return 0;
 }
 
@@ -56,6 +60,5 @@ int main()
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed             Write a program in C to find the maximum number between two numbers using a pointer.
+ *Ahmed Waheed            
  *****************************************************/
-

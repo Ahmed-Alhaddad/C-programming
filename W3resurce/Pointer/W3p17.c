@@ -1,8 +1,7 @@
-
 /*****************************************
  *
  *@file   :  
- *@Brief  :    Write a program in C to find the maximum number between two numbers using a pointer.
+ *@Brief  :    Write a program in C to print the elements of an array in reverse order.
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -12,10 +11,6 @@
 /*************** Include section end *****************************/
 
 /*************** Globel Variable section start *******************/
-int num1;
-int num2;
-int *Pnum1 = &num1;
-int *Pnum2 = &num2;
 
 
 /*************** Globel Variable section end *********************/
@@ -26,23 +21,28 @@ int *Pnum2 = &num2;
 
 int main()
 {
+	int Element[15];
+	int *PtrElement = &Element[0];
+	int NumElement = 0;
+	int Count = 0;
 	
-	printf("Input the first number : ");
-	scanf("%d", Pnum1);
-	printf("Input the second number : ");
-	scanf("%d", Pnum2);
-
-	if(*Pnum1 > *Pnum2)
+	printf("Input the number of elements to store in the array (max 15) : ");
+	scanf("%d", &NumElement);
+	printf("Input %d number of elements in the array : \n", NumElement);
+	for(Count = 0; Count < NumElement; Count++)
 	{
-		printf("%d is the macximum number.", *Pnum1);
+		printf("element - %d : ", (Count + 1));
+		scanf("%d", PtrElement);
+		PtrElement++;
 	}
-	else
+	PtrElement = &Element[NumElement - 1];
+	printf("The elements of array in reverse order are : \n");
+	for(Count = NumElement ; Count > 0 ; Count--)
 	{
-		printf("%d is the macximum number.", *Pnum2);
-	}	
+		printf("element - %d : %d\n", Count, *PtrElement);
+		PtrElement--;
+	}
 		
-
-
 	return 0;
 }
 
@@ -56,6 +56,6 @@ int main()
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed             Write a program in C to find the maximum number between two numbers using a pointer.
+ *Ahmed Waheed             Write a program in C to print the elements of an array in reverse order.
  *****************************************************/
 
