@@ -7,3 +7,6 @@ Clone [From Local Or Remote]
 Push [upload local Changes to Remote]
 Pull [You Pull changes From Remote Repo to Your Local]
 Pull Request [Tell Other About Your Changes To Pull it From Local To Remote]
+
+
+git pull origin ---> 1- copy branch to loccal git fetch 2- git merage 
