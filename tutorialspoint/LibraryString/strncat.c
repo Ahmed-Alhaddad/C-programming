@@ -1,7 +1,7 @@
 /*****************************************
  *
  *@file   :  
- *@Brief  :   Write a C program to find GCD (HCF) of two numbers using recursion.
+ *@Brief  :   
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -11,47 +11,53 @@
 /*************** Include section end *****************************/
 
 /*************** Globel Variable section start *******************/
-int check;
+
 
 /*************** Globel Variable section end *********************/
 
 /*************** Decleration section start *********************/
-int GCD(int, int);
+char *str_cat(char *dest, const char *src, size_t n);
 /*************** Decleration section end *********************/
 
 int main()
 {
-	int num1 = 0;
-	int num2 = 0;
-	int Result = 0;
 	
-	printf("Please Input the Number 1 : ");
-	scanf("%d", &num1);
-	printf("Please Input the Number 2 : ");
-	scanf("%d", &num2);
+	const char src_arr[50] = "Ahmed";
+	char dest_arr[50] = "check";
 	
-	Result = GCD(num1, num2);
-	printf(" num1 : %i\n num2 : %i\n GCD = %d\n ", num1, num2, Result);
-
+	printf("%s \n",str_cat(&dest_arr[0], &src_arr[0], 6));
+	printf("%s \n", dest_arr);
+	printf("%s \n", src_arr);
 	return 0;
 }
 
 /*************** Defenation Variable section start *********************/
-int GCD(int a, int b)
+
+char *str_cat(char *dest, const char *src, size_t n)
 {
-	if(b==0)
+	int i = 0;
+	int j = 0;
+	if(dest != NULL && src != NULL)
 	{
-		return a;
+		while(dest[i] != '\0')
+		{
+			i++;
+		}
+		while(j < n)
+		{
+			dest[i] = src[j];
+			i++; 
+			j++;
+		}
+		dest[i] = '\0';
 	}
 	else
 	{
-		return GCD(b, (a%b));
+		printf("Error");
 	}
-	
-	 
+		return dest;
+
 }
-
-
 
 
 /***************Defination Variable section end *********************/
@@ -59,6 +65,6 @@ int GCD(int a, int b)
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed         Write a C program to find GCD (HCF) of two numbers using recursion.
+ *Ahmed Waheed            
  *****************************************************/
 

@@ -1,7 +1,7 @@
 /*****************************************
  *
  *@file   :  
- *@Brief  :   
+ *@Brief  :   Write a C program to find LCM of two numbers using recursion.
  *@Auther :  Ahmed Waheed
  *****************************************
  */
@@ -37,6 +37,6 @@ int main()
 /**************************************************
  *User                    Date                Brief
  **************************************************
- *Ahmed Waheed            
+ *Ahmed Waheed            Write a C program to find LCM of two numbers using recursion.
  *****************************************************/
 

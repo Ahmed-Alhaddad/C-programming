@@ -23,4 +23,21 @@ Modulus Operator
  	   8 % 5 = 3
 
 When we perform the modulus operator between 8 and 5, means 8 % 5, it returns the remainder 3 because when 8 is divided by 5, it returns 1 as the quotient and 3 as the remainder.
+-----------------------------------------------------------------
 
+GCD 
+int GCD(int a, int b)
+{
+	if(b==0)
+	{
+		return a;
+	}
+	else
+	{
+		return GCD(b, (a%b));
+	}
+	
+	 
+}
+----------------------------------------------
+LCM ??

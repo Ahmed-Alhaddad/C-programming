@@ -14,8 +14,8 @@ int main()
 }
 void *my_memcpy(void *dest, const void *src, int length)
 {
-    unsigned char *name1 = src;
-    unsigned char *name2 = dest;
+    unsigned char *name1 = (unsigned char *)src;
+    unsigned char *name2 = (unsigned char *)dest;
     if((name1 == NULL) || (name2 == NULL))
     {
         printf("Best for you check your code");
@@ -28,5 +28,5 @@ void *my_memcpy(void *dest, const void *src, int length)
             length--;
         }
     }
-    return dest;
+    //return dest;
 }
